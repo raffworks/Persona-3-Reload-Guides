@@ -1,7 +1,6 @@
 .contents {
     display: none;
-
-    max-width: 1320px;
+    width: min(90%, 1320px);
     margin: 0 auto;
     padding: 1em;
 }
