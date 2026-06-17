@@ -27,68 +27,35 @@
             </svg>
         </button>
 
-        <!-- Header — luar page-layout supaya sidebar tak makan ruang title/link -->
-        <div class="site-header">
-            <h1 class="title"><b>PERSONA 3 <span id="reload">RELOAD</span> GUIDES</b></h1>
-            <h2 class="guide-link"><b><a href="https://www.powerpyx.com/persona-3-reload-100-walkthrough/">Original guide by Monomaru on
-                        powerpyx.com</a></b></h2>
-        </div>
+        <!-- 3-column layout: sidebar | main content | spacer -->
+        <div class="page-layout">
 
-        <!-- Mobile nav --><!--
-        <div class="container col-lg-10 col-xl-9 mobile-nav">
-            <nav class="navbar navbar-dark navbar-expand-md mb-3 mt-2">
-                <div class="container-fluid justify-content-center px-0"> 
-                    <button class="navbar-toggler menuButton" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#expandme">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-calendar3" viewBox="0 0 16 16">
-                            <path
-                                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
-                            <path
-                                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
-                        </svg> Menu
-                    </button> 
-                    <ul class="nav justify-content-evenly collapse navbar-collapse baredit" id="expandme">
-                        <li class="nav-item"><a href="#april" class="btn btn-primary rounded btn-sm navButton nav-link">APR</a></li>
-                        <li class="nav-item"><a href="#may" class="btn btn-primary rounded btn-sm navButton nav-link">MAY</a></li>
-                        <li class="nav-item"><a href="#june" class="btn btn-primary rounded btn-sm navButton nav-link">JUN</a></li>
-                        <li class="nav-item"><a href="#july" class="btn btn-primary rounded btn-sm navButton nav-link">JUL</a></li>
-                        <li class="nav-item"><a href="#august" class="btn btn-primary rounded btn-sm navButton nav-link">AUG</a></li>
-                        <li class="nav-item"><a href="#september" class="btn btn-primary rounded btn-sm navButton nav-link">SEP</a></li>
-                        <li class="nav-item"><a href="#october" class="btn btn-primary rounded btn-sm navButton nav-link">OCT</a></li>
-                        <li class="nav-item"><a href="#november" class="btn btn-primary rounded btn-sm navButton nav-link">NOV</a></li>
-                        <li class="nav-item"><a href="#december" class="btn btn-primary rounded btn-sm navButton nav-link">DEC</a></li>
-                        <li class="nav-item"><a href="#january" class="btn btn-primary rounded btn-sm navButton nav-link">JAN</a></li>
-                        <li class="nav-item"><a href="#march" class="btn btn-primary rounded btn-sm navButton nav-link">MAR</a></li>
-                        <li class="nav-item"><a href="javascript:void(0);" onclick="reset();" class="btn btn-danger rounded btn-sm navButton nav-link">RESET</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div> -->
-
-        <!-- Main layout: sidebar + content -->
-        <div class="page-layout mt-3">
-
-            <!-- Sidebar nav (desktop only) -->
+            <!-- LEFT: Sticky sidebar -->
             <nav class="side-nav" aria-label="Month navigation">
-                <div class="nav-label">Months</div>
-                <a href="#april" class="sideBtn">APR</a>
-                <a href="#may" class="sideBtn">MAY</a>
-                <a href="#june" class="sideBtn">JUN</a>
-                <a href="#july" class="sideBtn">JUL</a>
-                <a href="#august" class="sideBtn">AUG</a>
-                <a href="#september" class="sideBtn">SEP</a>
-                <a href="#october" class="sideBtn">OCT</a>
-                <a href="#november" class="sideBtn">NOV</a>
-                <a href="#december" class="sideBtn">DEC</a>
-                <a href="#january" class="sideBtn">JAN</a>
-                <a href="#march" class="sideBtn">MAR</a>
-                <div class="divider"></div>
-                <a href="javascript:void(0);" onclick="reset();" class="resetBtn">RESET</a>
+                <a href="#april"     class="sideBtn">APRIL</a>
+                <a href="#may"       class="sideBtn">MAY</a>
+                <a href="#june"      class="sideBtn">JUNE</a>
+                <a href="#july"      class="sideBtn">JULY</a>
+                <a href="#august"    class="sideBtn">AUGUST</a>
+                <a href="#september" class="sideBtn">SEPTEMBER</a>
+                <a href="#october"   class="sideBtn">OCTOBER</a>
+                <a href="#november"  class="sideBtn">NOVEMBER</a>
+                <a href="#december"  class="sideBtn">DECEMBER</a>
+                <a href="#january"   class="sideBtn">JANUARY</a>
+                <a href="#march"     class="sideBtn">MARCH</a>
+                <div class="side-divider"></div>
+                <a href="javascript:void(0);" onclick="reset();" class="sideBtn resetBtn">RESET</a>
             </nav>
 
-            <!-- Main content area -->
+            <!-- CENTRE: title + content -->
             <div class="main-content">
+
+                <!-- Header -->
+                <div class="main-header">
+                    <h1 class="title"><b>PERSONA 3 <span id="reload">RELOAD</span> GUIDES</b></h1>
+                    <h2 class="guide-link"><b><a href="https://www.powerpyx.com/persona-3-reload-100-walkthrough/">Original guide by Monomaru on powerpyx.com</a></b></h2>
+                </div>
+
                 <section class="px-2 mb-3">
                     <p>
                         This walkthrough is designed to help you achieve a full completion run in Persona 3 Reload.
@@ -121,7 +88,11 @@
 
                 <!-- Month content loaded here by app.js -->
                 <div id="month-container"></div>
+
             </div>
+
+            <!-- RIGHT: spacer column (mirror of sidebar width) -->
+            <div class="right-spacer"></div>
 
         </div>
 
