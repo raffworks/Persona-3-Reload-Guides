@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Persona 3 Reload Guides</title>
+    <title>Persona Guides</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -27,73 +27,112 @@
             </svg>
         </button>
 
-        <!-- 3-column layout: sidebar | main content | spacer -->
-        <div class="page-layout">
+        <!-- ── GAME SWITCHER ── -->
+        <div class="game-switcher">
+            <button id="btn-p3r" class="game-btn p3r-btn active-game" onclick="switchGame('p3r')">
+                <span class="game-btn-num">3</span>
+                <span class="game-btn-label">RELOAD</span>
+            </button>
+            <button id="btn-p5r" class="game-btn p5r-btn" onclick="switchGame('p5r')">
+                <span class="game-btn-num">5</span>
+                <span class="game-btn-label">ROYAL</span>
+            </button>
+        </div>
 
-            <!-- LEFT: Sticky sidebar -->
-            <nav class="side-nav" aria-label="Month navigation">
-                <a href="#april"     class="sideBtn">APRIL</a>
-                <a href="#may"       class="sideBtn">MAY</a>
-                <a href="#june"      class="sideBtn">JUNE</a>
-                <a href="#july"      class="sideBtn">JULY</a>
-                <a href="#august"    class="sideBtn">AUGUST</a>
-                <a href="#september" class="sideBtn">SEPTEMBER</a>
-                <a href="#october"   class="sideBtn">OCTOBER</a>
-                <a href="#november"  class="sideBtn">NOVEMBER</a>
-                <a href="#december"  class="sideBtn">DECEMBER</a>
-                <a href="#january"   class="sideBtn">JANUARY</a>
-                <a href="#march"     class="sideBtn">MARCH</a>
-                <div class="side-divider"></div>
-                <a href="javascript:void(0);" onclick="reset();" class="sideBtn resetBtn">RESET</a>
-            </nav>
+        <!-- ════════════════════════════════════════════
+             P3R GUIDE
+        ════════════════════════════════════════════ -->
+        <div id="guide-p3r" class="guide-wrapper">
+            <div class="page-layout">
+                <!-- LEFT: Sticky sidebar -->
+                <nav class="side-nav" id="p3r-sidenav" aria-label="Month navigation">
+                    <a href="#april"     class="sideBtn">APRIL</a>
+                    <a href="#may"       class="sideBtn">MAY</a>
+                    <a href="#june"      class="sideBtn">JUNE</a>
+                    <a href="#july"      class="sideBtn">JULY</a>
+                    <a href="#august"    class="sideBtn">AUGUST</a>
+                    <a href="#september" class="sideBtn">SEPTEMBER</a>
+                    <a href="#october"   class="sideBtn">OCTOBER</a>
+                    <a href="#november"  class="sideBtn">NOVEMBER</a>
+                    <a href="#december"  class="sideBtn">DECEMBER</a>
+                    <a href="#january"   class="sideBtn">JANUARY</a>
+                    <a href="#march"     class="sideBtn">MARCH</a>
+                    <div class="side-divider"></div>
+                    <a href="javascript:void(0);" onclick="reset();" class="sideBtn resetBtn">RESET</a>
+                </nav>
 
-            <!-- CENTRE: title + content -->
-            <div class="main-content">
+                <!-- CENTRE: title + content -->
+                <div class="main-content">
+                    <div class="main-header">
+                        <h1 class="title p3r-title"><b>PERSONA 3 <span id="reload">RELOAD</span></b></h1>
+                        <h2 class="guide-link"><b><a href="https://www.powerpyx.com/persona-3-reload-100-walkthrough/">Original guide by Monomaru</a></b></h2>
+                    </div>
 
-                <!-- Header -->
-                <div class="main-header">
-                    <h1 class="title"><b>PERSONA 3 <span id="reload">RELOAD</span> GUIDES</b></h1>
-                    <h2 class="guide-link"><b><a href="https://www.powerpyx.com/persona-3-reload-100-walkthrough/">Original guide by Monomaru on powerpyx.com</a></b></h2>
+                    <section class="px-2 mb-3">
+                        <p>
+                            This walkthrough is designed to help you achieve a full completion run in Persona 3 Reload.
+                            It covers all key progression elements including Social Links, Linked Episodes, Dorm interactions,
+                            trophies, and optional computer-related activities. Romance choices are highlighted in
+                            <span class="text-romance">Pink</span>, and completing at least one romance route is required
+                            to unlock the <strong>That Special Someone</strong> achievement.
+                        </p>
+                    </section>
+
+                    <div id="month-container"></div>
                 </div>
 
-                <section class="px-2 mb-3">
-                    <p>
-                        This walkthrough is designed to help you achieve a full completion run in Persona 3 Reload.
-                        It covers all key progression elements including Social Links, Linked Episodes, Dorm interactions,
-                        trophies, and optional computer-related activities. You can also follow it to manage romance routes
-                        and plan shrine visits with different characters. Romance choices are highlighted in
-                        <span class="text-romance">Pink</span>, and completing at least one romance route is required
-                        to unlock the <strong>That Special Someone</strong> achievement.
-                    </p>
-                    <p>
-                        Some Dorm activities, especially those involving characters like Fuuka and Yukari, are important for
-                        strengthening Social Links and contributing toward specific achievements such as
-                        <strong>Dorm Life</strong>, <strong>Eat Your Veggies, Peas!</strong>, and
-                        <strong>Through Thick and Thin</strong>.
-                    </p>
-                    <p>
-                        Linked Episodes are optional for completion purposes, but they are still included in this guide
-                        as they provide additional story content and unlock unique Personas that can be used for fusion.
-                    </p>
-                    <p>
-                        Computer-related tasks are only relevant once your Social Stats are fully developed. However,
-                        certain story days (such as 12/10 and 12/11) require specific choices like the Dating Site Note.
-                    </p>
-                    <p>
-                        If you miss matching Arcana requirements on certain days, your Social Link progression may fall
-                        behind. This can usually be corrected on flexible days with optional activities. However, skipping
-                        Linked Episode days may result in missing some exclusive Persona fusion opportunities.
-                    </p>
-                </section>
-
-                <!-- Month content loaded here by app.js -->
-                <div id="month-container"></div>
-
+                <div class="right-spacer"></div>
             </div>
+        </div>
 
-            <!-- RIGHT: spacer column (mirror of sidebar width) -->
-            <div class="right-spacer"></div>
+        <!-- ════════════════════════════════════════════
+             P5R GUIDE
+        ════════════════════════════════════════════ -->
+        <div id="guide-p5r" class="guide-wrapper" style="display:none;">
+            <div class="page-layout">
+                <!-- LEFT: Sticky sidebar -->
+                <nav class="side-nav p5r-sidenav" id="p5r-sidenav" aria-label="P5R Month navigation">
+                    <a href="#p5r-april"     class="sideBtn p5r-sideBtn">APRIL</a>
+                    <a href="#p5r-may"       class="sideBtn p5r-sideBtn p5r-soon">MAY</a>
+                    <a href="#p5r-june"      class="sideBtn p5r-sideBtn p5r-soon">JUNE</a>
+                    <a href="#p5r-july"      class="sideBtn p5r-sideBtn p5r-soon">JULY</a>
+                    <a href="#p5r-august"    class="sideBtn p5r-sideBtn p5r-soon">AUG</a>
+                    <a href="#p5r-september" class="sideBtn p5r-sideBtn p5r-soon">SEPT</a>
+                    <a href="#p5r-october"   class="sideBtn p5r-sideBtn p5r-soon">OCT</a>
+                    <a href="#p5r-november"  class="sideBtn p5r-sideBtn p5r-soon">NOV</a>
+                    <a href="#p5r-december"  class="sideBtn p5r-sideBtn p5r-soon">DEC</a>
+                    <a href="#p5r-january"   class="sideBtn p5r-sideBtn p5r-soon">JAN</a>
+                    <a href="#p5r-february"  class="sideBtn p5r-sideBtn p5r-soon">FEB</a>
+                    <a href="#p5r-march"     class="sideBtn p5r-sideBtn p5r-soon">MARCH</a>
+                    <div class="side-divider"></div>
+                    <a href="javascript:void(0);" onclick="resetP5R();" class="sideBtn resetBtn">RESET</a>
+                </nav>
 
+                <!-- CENTRE: title + content -->
+                <div class="main-content">
+                    <div class="main-header">
+                        <h1 class="title p5r-title"><b>PERSONA 5 <span id="royal">ROYAL</span></b></h1>
+                        <h2 class="guide-link"><b><a href="https://www.thegamer.com/persona-5-royal-april-walkthrough-guide/">Guide based on TheGamer & GameFAQs</a></b></h2>
+                    </div>
+
+                    <section class="px-2 mb-3">
+                        <p>
+                            This walkthrough covers all Confidants, Social Stats, Trophies, and story events for a
+                            100% completion run of Persona 5 Royal. Always equip a Persona of the matching arcana
+                            when spending time with a Confidant (except Rank 1 and Rank 10) for bonus points.
+                            <span class="p5r-confidant">Blue text</span> indicates required Persona arcana to equip.
+                        </p>
+                        <p>
+                            <span class="text-warning-red">⚠ More months coming soon!</span>
+                            Currently April is available. May–March will be added progressively.
+                        </p>
+                    </section>
+
+                    <div id="p5r-month-container"></div>
+                </div>
+
+                <div class="right-spacer"></div>
+            </div>
         </div>
 
         <script src="js/js-loading-overlay.min.js"></script>
@@ -101,11 +140,34 @@
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
         <script src="js/app.js"></script>
+        <script src="js/app-p5r.js"></script>
         <script>
+            // ── Game switcher ──────────────────────────────────────────
+            let currentGame = localStorage.getItem('activeGame') || 'p3r';
+
+            function switchGame(game) {
+                currentGame = game;
+                localStorage.setItem('activeGame', game);
+
+                document.getElementById('guide-p3r').style.display = game === 'p3r' ? '' : 'none';
+                document.getElementById('guide-p5r').style.display = game === 'p5r' ? '' : 'none';
+
+                document.getElementById('btn-p3r').classList.toggle('active-game', game === 'p3r');
+                document.getElementById('btn-p5r').classList.toggle('active-game', game === 'p5r');
+
+                // Update body theme class
+                document.body.classList.toggle('theme-p5r', game === 'p5r');
+                document.body.classList.toggle('theme-p3r', game === 'p3r');
+
+                window.scrollTo(0, 0);
+            }
+
+            // ── P3R sidebar active month ───────────────────────────────
             const months = ['april','may','june','july','august','september','october','november','december','january','march'];
-            const sideLinks = document.querySelectorAll('.side-nav a.sideBtn');
+            const sideLinks = document.querySelectorAll('#p3r-sidenav a.sideBtn');
 
             function updateActiveMonth() {
+                if (currentGame !== 'p3r') return;
                 let current = '';
                 months.forEach(m => {
                     const el = document.getElementById(m);
@@ -117,7 +179,51 @@
                 });
             }
 
-            window.addEventListener('scroll', updateActiveMonth, { passive: true });
+            // ── P5R sidebar active month ───────────────────────────────
+            const p5rMonths = ['p5r-april','p5r-may','p5r-june','p5r-july','p5r-august',
+                               'p5r-september','p5r-october','p5r-november','p5r-december',
+                               'p5r-january','p5r-february','p5r-march'];
+            const p5rSideLinks = document.querySelectorAll('#p5r-sidenav a.p5r-sideBtn');
+
+            function updateP5RActiveMonth() {
+                if (currentGame !== 'p5r') return;
+                let current = '';
+                p5rMonths.forEach(m => {
+                    const el = document.getElementById(m);
+                    if (el && el.getBoundingClientRect().top <= 120) current = m;
+                });
+                p5rSideLinks.forEach(a => {
+                    const href = a.getAttribute('href').replace('#', '');
+                    a.classList.toggle('active', href === current);
+                });
+            }
+
+            window.addEventListener('scroll', () => {
+                updateActiveMonth();
+                updateP5RActiveMonth();
+            }, { passive: true });
+
+            // ── Init ───────────────────────────────────────────────────
+            document.addEventListener('DOMContentLoaded', async () => {
+                loadScreen();
+                scrollFunction();
+
+                // Load both guides in parallel
+                await Promise.all([loadMonths(), loadP5RMonths()]);
+
+                // Init P3R
+                loadCheckboxStates();
+                buildDatesArray();
+
+                // Init P5R
+                loadP5RCheckboxStates();
+                buildP5RDatesArray();
+
+                // Apply saved game preference
+                switchGame(currentGame);
+
+                hideLoad();
+            });
         </script>
     </div>
 

@@ -1,0 +1,157 @@
+/* ============================================================
+   GAME SWITCHER
+   ============================================================ */
+.game-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0 0.5rem 0;
+}
+
+.game-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 70px;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: Outfit, sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.game-btn-num {
+    font-size: 2em;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.game-btn-label {
+    font-size: 0.55em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+/* P3R button active */
+.p3r-btn.active-game {
+    background-color: rgb(0, 127, 201);
+    border-color: white;
+    color: white;
+    box-shadow: 0 0 16px 2px rgba(0, 197, 255, 0.5);
+}
+
+/* P5R button active */
+.p5r-btn.active-game {
+    background-color: rgb(180, 30, 40);
+    border-color: white;
+    color: white;
+    box-shadow: 0 0 16px 2px rgba(220, 53, 69, 0.6);
+}
+
+.game-btn:hover {
+    border-color: white;
+    color: white;
+}
+
+/* ============================================================
+   P5R THEME — day headers, months, sidebar
+   ============================================================ */
+.p5r-day-header {
+    color: rgb(255, 255, 255);
+    background-color: rgb(180, 30, 40);
+    margin: 0;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    border: white solid 1px;
+}
+
+.p5r-month {
+    background-color: white;
+    color: rgb(180, 30, 40);
+    text-shadow: 2px 2px 0px rgba(220, 53, 69, 0.3);
+}
+
+#royal {
+    color: rgb(220, 53, 69);
+}
+
+.p5r-title {
+    color: white;
+}
+
+/* P5R sidebar buttons */
+.p5r-sidenav a.sideBtn {
+    background-color: rgb(180, 30, 40);
+}
+
+.p5r-sidenav a.sideBtn:hover,
+.p5r-sidenav a.sideBtn.active {
+    background-color: rgb(220, 53, 69);
+}
+
+/* Greyed out "coming soon" months */
+.p5r-sidenav a.p5r-soon {
+    background-color: rgb(80, 30, 35);
+    color: rgba(255,255,255,0.4);
+    cursor: default;
+    pointer-events: none;
+}
+
+/* P5R current date highlight */
+.p5r-currentDate {
+    box-shadow: inset 0px 0px 4px 4px rgb(255, 80, 80);
+}
+
+/* P5R confidant arcana text */
+.p5r-confidant {
+    color: #5bc8ff;
+    font-weight: 600;
+}
+
+/* P5R trophy text */
+.p5r-trophy {
+    color: rgb(255, 217, 0);
+    font-weight: bold;
+}
+
+/* P5R month end summary box */
+.p5r-month-summary {
+    background-color: rgba(180, 30, 40, 0.2);
+    border: 1px solid rgba(180, 30, 40, 0.6);
+    border-radius: 10px;
+    padding: 1em 1.5em;
+    margin: 1em 0;
+}
+
+.p5r-month-summary h3 {
+    color: white;
+    font-size: 1em;
+    margin-bottom: 0.75em;
+    text-shadow: 1px 1px 0 rgb(180, 30, 40);
+}
+
+.p5r-stats-grid {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.p5r-stat-block {
+    font-size: 0.85em;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+}
+
+.p5r-stat-label {
+    color: white;
+    font-weight: 700;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2em;
+    text-transform: uppercase;
+}
